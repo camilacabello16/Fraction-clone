@@ -1,0 +1,710 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+.body{
+    font-family: 'Noto Sans', sans-serif;
+}
+a{
+    color: black
+}
+a:hover{
+    text-decoration: none;
+}
+p{
+    margin-bottom: 0;
+}
+.audio-wrong{
+    opacity: 0;
+    visibility: hidden;
+}
+/* lesson 1 */
+.wp-background-lesson{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/galaxy-background.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 25px;
+}
+.hidden-background{
+    background-image: none;
+}
+.wp-banner-lesson{
+    width: 960px;
+    min-height: 650px;
+    box-shadow: 0px 2px 19px 0px rgba(0,0,0,0.5), 0px 2px 4px 0px rgba(0,0,0,0.5);
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+.wp-nb-lesson{
+    display: flex;
+    border-bottom: 1px solid rgba(150,150,150,0.29);
+    padding: 15px 20px;
+}
+.btn-back{
+    display: flex;
+}
+.btn-back span{
+    font-size: 18px;
+    color: #246EA1;
+    margin-left: 6px;
+    transition: 0.3s;
+}
+.btn-back i {
+    color: #246EA1;
+    margin-top: 1px;
+    font-size: 27px;
+    transition: 0.3s;
+}
+.btn-back:hover span{
+    color: #50acdb;
+    transition: 0.3s;
+}
+.btn-back:hover i{
+    color: #50acdb;
+    transition: 0.3s;
+}
+.nb-lesson{
+    margin: 0 auto;
+    width: 465px;
+    height: 26px;
+    border-radius: 16px;
+    background: #EDEDED;
+    box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.22), inset 0px 1px 3px 0px rgba(0,0,0,0.18);
+    position: relative;
+    display: flex;
+}
+.wp-img-ball{
+    width: 21px;
+    height: 21px;
+    margin-left: 3px;
+    margin-top: -1px;
+}
+.wp-img-ball img{
+    width: 100%;
+    height: 100%;
+}
+.wp-content-lesson{
+    text-align: center;
+    padding-top: 25px;
+}
+.wp-content-lesson p{
+    font-size: 38px;
+    /* margin-bottom: 10px; */
+}
+.circle-fraction {
+    width: 200px;
+    height: 200px;
+    margin-left: 200px;
+}
+.circle-fraction img{
+    width: 100%;
+    height: 100%;
+}
+.content-lesson{
+    padding: 0 50px;
+}
+.numerator-fraction {
+    font-size: 38px;
+    line-height: 38px;
+    background-color: #4FBDB3;
+    border-radius: 10px;
+    margin-bottom: 3px;
+}
+.denominator-fraction{
+    font-size: 38px;
+    line-height: 38px;
+}
+.content-detail{
+    display: flex;
+    align-items: center;
+}
+.line-fraction{
+    height: 3px;
+    width: 50px;
+    background-color: #000;
+    border-radius: 5px;
+}
+.numerator-txt {
+    font-size: 24px;
+    padding: 2px 20px;
+    border-radius: 10px;
+    background-color: #edeae3;
+    position: absolute;
+    top: 0;
+    left: 74px;
+}
+.numerator-txt::before {
+    content: "";
+    background-color: #edeae3;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    left: -8px;
+    transform: rotate(45deg);
+}
+.fraction-nb {
+    position: relative;
+    margin-left: 100px;
+}
+.lesson-question {
+    width: 650px;
+    background: #4fbdb3;
+    margin: 0 auto;
+    border-radius: 25px;
+    padding: 10px;
+    padding-left: 30px;
+    display: flex;
+    margin-top: 10px;
+}
+.lesson-question p{
+    font-size: 21px;
+    text-align: left;
+    margin-bottom: 0;
+    flex: 1;
+}
+.empty-space {
+    margin-left: 10px;
+    width: 400px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.hidden-answer {
+    background-color: #4FBDB3;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.hidden-answer p {
+    text-align: center;
+}
+.answer-opt{
+    width: 400px;
+    background-color: #EFE9E1;
+    border-radius: 15px;
+    padding: 3px 0;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.test{
+    animation-name: example;
+    animation-duration: .5s;
+    animation-iteration-count: 2;
+}
+@keyframes example {
+    from {background-color: #cecbc6;}
+    to {background-color: #ff5768;}
+  }
+.answer-opt:hover{
+    background-color: #cecbc6;
+    transition: 0.4s;
+}
+
+.answer-opt p{
+    font-size: 21px;
+    margin-bottom: 0;
+}
+.btn-next-lesson {
+    font-size: 24px;
+    background-color: #6EC3E2;
+    width: 79px;
+    margin: 0 auto;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 70px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.display-btn-next {
+    opacity: 1!important;
+    visibility: visible!important;
+}
+.lesson-anwser {
+    margin-left: 230px;
+    padding-top: 10px;
+}
+.hidden-lesson{
+    display: none;
+    transition: 0.5s;
+}
+.denominator-txt{
+    font-size: 24px;
+    padding: 2px 20px;
+    border-radius: 10px;
+    background-color: #edeae3;
+    position: absolute;
+    top: 44px;
+    left: 74px;
+}
+.denominator-txt::before{
+    content: "";
+    background-color: #edeae3;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    left: -8px;
+    transform: rotate(45deg);
+}
+.wp-fraction-ques{
+    background-color: #4fbdb3;
+    border-radius: 15px;
+    width: 380px;
+    margin: 0 auto;
+    height: 161px;
+    padding: 10px 15px;
+    display: flex;
+    margin-top: 43px;
+    margin-bottom: 45px;
+}
+.fr-bar-under   {
+    height: 4px;
+    background-color: #000;
+    border-radius: 7px;
+    width: 48px;
+}
+.fr-num{
+    font-size: 50px!important;
+}
+.fr-demo{
+    font-size: 50px!important;
+}
+.fraction-ques {
+    width: 30%;
+    text-align: left;
+    padding-left: 18px;
+    margin-top: -6px;
+}
+
+.ques-fr-field-bar{
+    height: 40px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-bottom: 11px;
+    margin-bottom: 7px;
+}
+.ques-fr-field {
+    flex: 1;
+    padding-top: 4px;
+}
+.fr-ans-option{
+    width: 245px;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    background-color: #efe9e1;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.fr-ans-option:hover{
+    background-color: #cecbc6;
+    transition: 0.3s;
+}
+.fr-ans-option p{
+    font-size: 21px;
+    padding: 5px;
+}
+.btn-done{
+    width: 85px;
+    margin: 0 auto;
+    background: #6ec3e2;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+}
+.btn-done a {
+    font-size: 24px;
+    color: #fff;
+    padding: 7px 10px;
+    cursor: pointer;
+    margin-top: 80px;
+    display: block;
+}
+.ball-3 {
+    position: absolute;
+    right: 3px;
+    top: 0;
+    animation-name: animate-ball-three;
+    animation-duration: 1.5s;
+}
+.ball-2 {
+    position: absolute;
+    right: 27px;
+    top: 0;
+    animation-name: animate-ball-two;
+    animation-duration: 1.5s;
+}
+@keyframes animate-ball-three{
+    from {right:392px;}
+    to {right: 3px;}
+}
+@keyframes animate-ball-two{
+    from {right:418px;}
+    to {right: 27px;}
+}
+.hidden-obj {
+    background-color: #2aaea2;
+    border-radius: 15px;
+    transition: 0.4s;
+    opacity: 0;
+    visibility: hidden;
+}
+.hidden-obj p {
+    font-size: 25px;
+    color: #fff;
+    padding: 2px;
+}
+
+/* lesson 2 */
+.wp-content-lesson-2{
+    text-align: center;
+    padding-top: 25px;
+}
+.btn-check-ans {
+    background-color: #6EC3E2;
+    border-radius: 5px;
+    width: 62px;
+    margin: 0 auto;
+    padding: 5px 0;
+    transition: 0.3s;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+.line-fraction-page-1 {
+    height: 2px;
+    width: 40px;
+    background-color: #000;
+    border-radius: 5px;
+    margin: auto;
+}
+.content-lesson-txt{
+    font-size: 36px;
+    font-weight: 700;
+}
+.wp-fr-answer p{
+    font-size: 30px;
+}
+.answer {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.answer-Y{
+    width: 70px;
+    height: 45px;
+    margin: 0 30px;
+    background-color: #6EC3E2;
+    transition: 0.3s;
+    border-radius: 5px;
+    line-height: 45px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+.answer-Y:hover{
+    background-color: #59BBDE;
+    transition: 0.3s;
+}
+.page-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+}
+.Y-N-ans {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+.img-fraction{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.content-ls2 {
+    font-size: 48px;
+    padding-top: 10px;
+}
+.fraction-ls2 {
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 89px;
+}
+.denominator-page-3 {
+    width: 83px;
+    height: 68px;
+    border-radius: 11px;
+    line-height: 68px;
+}
+.denominator-page-3 p{
+    font-size: 65px;
+}
+.numerator-page-3{
+    width: 83px;
+    height: 68px;
+    border-radius: 11px;
+    line-height: 68px;
+}
+.numerator-page-3 p{
+    font-size: 65px;
+}
+.background-ques-fr{
+    background-color: #A0CD94;
+}
+.line-fraction-ls2{
+    height: 3px;
+    width: 86px;
+    background-color: #000;
+    border-radius: 1px;
+    margin: 4px 0;
+}
+.denominator-page-4 {
+    height: 60px;
+    width: 70px;
+    background-color: #A0CD94;
+    margin-top: 5px;
+    line-height: 52px;
+    border-radius: 10px;
+}
+.numerator-page-5 {
+    height: 60px;
+    width: 50px;
+    background-color: #A0CD94;
+    margin-bottom: 10px;
+    line-height: 50px;
+    border-radius: 10px;
+}
+.denominator-page-5 {
+    line-height: 52px;
+}
+.wp-fr-answer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 120px;
+}
+.line-fraction-page1 {
+    width: 30px;
+    height: 1px;
+    background-color: #000;
+}
+.non-fr{
+    margin-top: 15px;
+}
+.btn-check-ans:hover{
+    background-color: #59bbde;;
+    transition: 0.3s;
+}
+.ques-fr--num{
+    font-size: 65px;
+}
+.ques-fr--bar {
+    width: 86px;
+    border-bottom: 3px solid #000;
+    border-radius: 1px;
+    margin: 0 auto;
+    margin-top: -8px;
+    margin-bottom: -8px;
+}
+.ques-fr {
+    padding-top: 80px;
+}
+.ques-title-block{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.ques-title-block p{
+    font-size: 42px;
+}
+.ques-title-block--field{
+    width: 75px;
+    height: 45px;
+    border: 2px solid #12b1ff;
+    border-radius: 6px;
+    outline: none;
+    text-align: center;
+    font-size: 38px;
+    margin-left: 20px;
+}
+.wp-btn-link-next{
+    width: 85px;
+    height: 45px;
+    background-color: #6EC3E2;
+    border-radius: 5px;
+    margin: 0 auto;
+    line-height: 45px;
+    transition: 0.3s;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+.wp-btn-link-next:hover{
+    background-color: #59BBDE;
+    transition: 0.3s;
+}
+.ball-8-ls2 {
+    position: absolute;
+    right: 3px;
+    top: 0;
+    animation-name: animate-ball-8;
+    animation-duration: 1.5s;
+}
+.ball-7-ls2 {
+    position: absolute;
+    right: 27px;
+    top: 0;
+    animation-name: animate-ball-7;
+    animation-duration: 1.5s;
+}
+.ball-6-ls2 {
+    position: absolute;
+    right: 51px;
+    top: 0;
+    animation-name: animate-ball-6;
+    animation-duration: 1.5s;
+}
+.ball-5-ls2 {
+    position: absolute;
+    right: 75px;
+    top: 0;
+    animation-name: animate-ball-5;
+    animation-duration: 1.5s;
+}
+.ball-4-ls2 {
+    position: absolute;
+    right: 99px;
+    top: 0;
+    animation-name: animate-ball-4;
+    animation-duration: 1.5s;
+}
+.ball-3-ls2 {
+    position: absolute;
+    right: 123px;
+    top: 0;
+    animation-name: animate-ball-3;
+    animation-duration: 1.5s;
+}
+.ball-2-ls2 {
+    position: absolute;
+    right: 147px;
+    top: 0;
+    animation-name: animate-ball-2;
+    animation-duration: 1.5s;
+}
+.delay {
+    animation-delay: -1.5s;
+}
+@keyframes animate-ball-8{
+    from {right:262px;}
+    to {right: 3px;}
+}
+@keyframes animate-ball-7{
+    from {right:288px;}
+    to {right: 27px;}
+}
+@keyframes animate-ball-6{
+    from {right:314px;}
+    to {right: 51px;}
+}
+@keyframes animate-ball-5{
+    from {right:340px;}
+    to {right: 75px;}
+}
+@keyframes animate-ball-4{
+    from {right:366px;}
+    to {right: 99px;}
+}
+@keyframes animate-ball-3{
+    from {right:392px;}
+    to {right: 123px;}
+}
+@keyframes animate-ball-2{
+    from {right:418px;}
+    to {right: 147px;}
+}
+.background-wrong-ans{
+    background-color: #ff5768;
+}
+.background-right-ans{
+    animation-name: animateRight;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+@keyframes animateRight {
+    from {background-color: #6EC3E2;}
+    to {background-color: #8fbf82;}
+}
+
+/* lesson 3 */
+.lesson-require{
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+.input-numerator{
+    border: 2px solid #12B1FF;
+    height: 58px;
+    width: 46px;
+    border-radius: 6px;
+    font-size: 55px;
+    text-align: center;
+    outline: none;
+}
+.insert-fr--numerator {
+    height: 58px;
+    width: 46px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+.insert-fr {
+    padding-top: 150px;
+}
+.insert-fr--bar{
+    height: 4px;
+    background-color: #000;
+    border-radius: 7px;
+    width: 59px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+.input-btn-done {
+    width: 85px;
+    height: 45px;
+    background-color: #6EC3E2;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    bottom: -192px;
+    left: 50%;
+    transform: translateX(-50%);
+    outline: none;
+    transition: 0.3s;
+}
+.wp-content-lesson-3 {
+    position: relative;
+}
+.input-btn-done:disabled{
+    opacity: 0.5;
+}
+.input-btn-done:hover{
+    background-color:#2eaddb;
+    transition: 0.3s;
+}

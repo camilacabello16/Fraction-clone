@@ -1,0 +1,94 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Educational web-site for children based on interactive learning</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" type="text/css" href="../vendor/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../vendor/jquery.mmenu.all.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/Lesson.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/success.css">
+</head>
+<body>
+    <div id="lesson-3" class="wp-background-lesson" v-bind:class="{'hidden-background' : checkSuccess == 1}">
+        <div class="wp-banner-lesson " v-bind:class="{'hidden-lesson' : checkNextScreen==1}">
+            <div class="wp-nb-lesson">
+                <a href="../DragonLearn.html" class="btn-back">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Back</span>
+                </a>
+                <div class="nb-lesson">
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                </div>
+            </div>
+            <div class="wp-content-lesson-3">
+                <p class="lesson-require">Write the fraction with denominator 4 and numerator 1</p>
+                <div class="insert-fr">
+                    <div class="insert-fr--numerator">
+                        <input id="spec-num" v-on:input="inputNumerator" class="input-numerator" type="text" v-model:value="numerator_inp">
+                    </div>
+                    <div class="insert-fr--bar"></div>
+                    <div class="insert-fr--numerator">
+                        <input id="spec-deno" v-on:input="inputDenominator" class="input-numerator" type="text" v-model:value="denominator_inp">
+                    </div>
+                </div>
+                <input id="btn-done-wrong" v-on:click="checkPass" class="input-btn-done" type="button" value="Done">
+            </div>
+        </div>
+        <div class="wp-banner-lesson " v-bind:class="{'hidden-lesson' : checkNextScreenTwo==0}">
+            <div class="wp-nb-lesson">
+                <a href="../DragonLearn.html" class="btn-back">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Back</span>
+                </a>
+                <div class="nb-lesson">
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-3" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                </div>
+            </div>
+            <div class="wp-content-lesson-3">
+                <p class="lesson-require">Write the fraction with numerator 4 and denominator 5</p>
+                <div class="insert-fr">
+                    <div class="insert-fr--numerator">
+                        <input id="spec-test-num" v-on:input="inputNumeratorTwo" class="input-numerator" type="text" v-model:value="numerator_inp_two">
+                    </div>
+                    <div class="insert-fr--bar"></div>
+                    <div class="insert-fr--numerator">
+                        <input id="spec-test-deno" v-on:input="inputDenominatorTwo" class="input-numerator" type="text" v-model:value="denominator_inp_two">
+                    </div>
+                </div>
+                <input id="btn-done-wrong-2" v-on:click="checkPassTwo" class="input-btn-done" type="button" value="Done" >
+            </div>
+        </div>
+        <div class="wp-banner-success" v-bind:class="{'hidden-lesson' : checkSuccess == 0}">
+            <div class="success-txt">
+                <p>Well done! You completed the card!</p>
+            </div>
+            <div class="success-img">
+                <img src="../img/success.png">
+            </div>
+            <div class="success-btn">
+                <a href="../DragonLearn.html">Go to lesson</a>
+            </div>
+        </div>                                           
+    </div>
+
+    <script src="../vendor/jquery-3.4.1.min.js"></script>
+    <script src="../JS/Lesson3.js"></script>
+    <script src="../JS/main.js"></script>
+</body>
+</html>

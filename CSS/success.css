@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+.body{
+    font-family: 'Noto Sans', sans-serif;
+}
+a{
+    color: black
+}
+a:hover{
+    text-decoration: none;
+}
+p{
+    margin-bottom: 0;
+}
+.success-txt p{
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+.success-img{
+    width: 180px;
+    margin: 0 auto;
+}
+.success-img img{
+    width: 100%;
+}
+.wp-banner-success {
+    padding-top: 50px;
+}
+.success-btn {
+    background-color: #66C3E6;
+    transition: 0.3s;
+    border-radius: 7px;
+    width: 198px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
+.success-btn a{
+    color: #fff;
+    display: block;
+    font-size: 29px;
+}
+.success-btn:hover{
+    transition: 0.3s;
+    background-color: #50bae2;
+}

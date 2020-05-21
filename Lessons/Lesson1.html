@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Educational web-site for children based on interactive learning</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" type="text/css" href="../vendor/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../vendor/jquery.mmenu.all.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <!-- VueJs -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/Lesson.css">
+</head>
+<body>
+    <div class="wp-background-lesson" id="lesson-1">
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson' : checkNextScreen == 1}">
+            <div class="wp-nb-lesson">
+                <a href="../DragonLearn.html" class="btn-back">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Back</span>
+                </a>
+                <div class="nb-lesson">
+                    <div class="wp-img-ball">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball">
+                        <img src="../img/ball.png">
+                    </div>
+                </div>
+            </div>
+            <div class="wp-content-lesson">
+                <div class="content-lesson">
+                    <p>Choose the right answer</p>
+                    <div class="content-detail">
+                        <div class="circle-fraction">
+                            <img src="../img/fraction.png">
+                        </div>
+                        <div class="fraction-nb">
+                            <div class="numerator-fraction">
+                                2
+                            </div>
+                            <div class="line-fraction">  
+                            </div>
+                            <div class="denominator-fraction">3</div>
+                            <div class="numerator-txt">Numerator</div>
+                        </div>
+                    </div>
+                    <div class="lesson-question">
+                        <p>Fraction numerator: </p>
+                        <div class="empty-space">
+                            <div class="hidden-answer" v-bind:class="{'display-btn-next' : checkAnswer == 1}">
+                                <p>This is how many pieces are shaded</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson-anwser">
+                        <div class="answer-opt" id="right_answer_1" v-on:click="rightAnswer" v-bind:class="{'hidden-lesson' : checkAnswer == 1}">
+                            <p>This is how many pieces are shaded</p>
+                        </div>
+                        <div class="answer-opt" id="wrong_answer_1" v-on:click="wrongAnswer" v-bind:class="{'hidden-lesson' : checkAnswer == 1}">
+                            <p>The circle is divided into this many pieces</p>
+                        </div>
+                        <div class="answer-opt" id="wrong_answer_2" v-on:click="wrongAnswer" v-bind:class="{'hidden-lesson' : checkAnswer == 1}">
+                            <p>This is how many pieces are not shaded</p>
+                        </div>
+                    </div>
+                    <div class="btn-next-lesson" v-bind:class="{'display-btn-next' : checkAnswer == 1}" v-on:click="clickNextScreen">
+                        Next
+                    </div>
+                </div>
+            </div>
+        </div>                                                
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson' : checkScreenTwo == 0}">
+            <div class="wp-nb-lesson">
+                <a href="../DragonLearn.html" class="btn-back">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Back</span>
+                </a>
+                <div class="nb-lesson">
+                    <div class="wp-img-ball">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-3">
+                        <img src="../img/ball.png">
+                    </div>
+                </div>
+            </div>
+            <div class="wp-content-lesson">
+                <div class="content-lesson">
+                    <p>Choose the right answer</p>
+                    <div class="content-detail">
+                        <div class="circle-fraction">
+                            <img src="../img/fraction.png">
+                        </div>
+                        <div class="fraction-nb">
+                            <div class="denominator-fraction">
+                                2
+                            </div>
+                            <div class="line-fraction">  
+                            </div>
+                            <div class="numerator-fraction" style="margin-top: 4px;">3</div>
+                            <div class="denominator-txt">Denominator</div>
+                        </div>
+                    </div>
+                    <div class="lesson-question">
+                        <p>Fraction numerator: </p>
+                        <div class="empty-space">
+                            <div class="hidden-answer" v-bind:class="{'display-btn-next' : checkAnswerTwo == 1}">
+                                <p>The circle is divided into this many pieces</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson-anwser">
+                        <div id="wrong_answer_3" class="answer-opt" v-on:click="" v-bind:class="{'hidden-lesson' : checkAnswerTwo == 1}">
+                            <p>This is how many pieces are shaded</p>
+                        </div>
+                        <div id="right_answer_2" class="answer-opt" v-on:click="rightAnswerTwo" v-bind:class="{'hidden-lesson' : checkAnswerTwo == 1}">
+                            <p>The circle is divided into this many pieces</p>
+                        </div>
+                        <div id="wrong_answer_4" class="answer-opt" v-on:click="" v-bind:class="{'hidden-lesson' : checkAnswerTwo == 1}">
+                            <p>This is how many pieces are not shaded</p>
+                        </div>
+                    </div>
+                    <div id="spec_btn" class="btn-next-lesson" v-bind:class="{'display-btn-next' : checkAnswerTwo == 1}" v-on:click="clickNextScreenTwo">
+                        Next
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson' : this.checkScreenThree == 0}">
+            <div class="wp-nb-lesson">
+                <a href="../DragonLearn.html" class="btn-back">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Back</span>
+                </a>
+                <div class="nb-lesson">
+                    <div class="wp-img-ball">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-2">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-3 delay">
+                        <img src="../img/ball.png">
+                    </div>
+                </div>
+            </div>
+            <div class="wp-content-lesson">
+                <div class="content-lesson">
+                    <p>Choose the right answers</p>
+                    <div class="wp-fraction-ques">
+                        <div class="fraction-ques">
+                            <p class="fr-num">21</p>
+                            <div class="fr-bar-under"></div>
+                            <p class="fr-demo">81</p>
+                        </div>
+                        <div class="ques-fr-field">
+                            <div class="ques-fr-field-bar">
+                                <div class="hidden-obj" v-bind:class="{'display-btn-next' : optOne==1}">
+                                    <p>Fraction numerator</p>
+                                </div>
+                            </div>
+                            <div class="ques-fr-field-bar">
+                                <div class="hidden-obj" v-bind:class="{'display-btn-next' : optTwo==2}">
+                                    <p>Fraction bar</p>
+                                </div>
+                            </div>
+                            <div class="ques-fr-field-bar" >
+                                <div class="hidden-obj" v-bind:class="{'display-btn-next' : optThree==3}">
+                                    <p>Fraction denominator</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="opt-one" class="fr-ans-option" v-on:click="handleClickOptOne" v-bind:class="{'hidden-lesson' : optOne==1}">
+                        <p>Fraction numerator</p>
+                    </div>
+                    <div id="opt-two" class="fr-ans-option" v-on:click="handleClickOptThree" v-bind:class="{'hidden-lesson' : optThree==3}">
+                        <p>Fraction denominator</p>
+                    </div>
+                    <div id="opt-three" class="fr-ans-option" v-on:click="handleClickOptTwo" v-bind:class="{'hidden-lesson' : optTwo==2}">
+                        <p>Fraction bar</p>
+                    </div>
+                    <div class="btn-done" v-bind:class="{'display-btn-next' : optThree==3}">
+                        <a href="./success.html">Done</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../vendor/jquery-3.4.1.min.js"></script>
+    <script src="../JS/Lesson1.js"></script>
+    <script src="../JS/main.js"></script>
+
+</body>
+</html>

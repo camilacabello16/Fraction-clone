@@ -1,0 +1,239 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+.body{
+    font-family: 'Noto Sans', sans-serif;
+}
+a{
+    color: black
+}
+a:hover{
+    text-decoration: none;
+}
+
+
+/* CSS header */
+.wp-header {
+    background-color: #eee;
+    border-bottom: 1px solid #D8D8D8;
+    height: 50px;
+}
+.web-link{
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 28px;
+}
+.web-link:hover{
+    color: #000;
+}
+.page-menu-list{
+    font-size: 17px;
+    color: #707c81;
+    font-weight: bold;
+    margin-right: 28px;
+    transition: 0.3s;
+}
+.page-menu-list:hover{
+    color: #ff4658;
+    transition: 0.3s;
+}
+.main-menu {
+    padding: 13px 0;
+}
+.wp-log-in {
+    display: flex;
+    padding: 5px;
+}
+.invite-people {
+    width: 105px;
+    height: 40px;
+    line-height: 16px;
+    text-align: center;
+    border: 1px solid #FF5D6A;
+    border-radius: 5px;
+    padding: 2px;
+}
+.bnt-invite {
+    font-size: 14px;
+    color: #FF5D6A;
+    font-weight: 700;
+    display: inline-block;
+}
+.bnt-invite:hover{
+    color: #FF5D6A;
+}
+.name-acc{
+    font-size: 13px;
+    color: #707c81;
+    font-weight: bold;
+    line-height: 14px;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+.web-account i{
+    color: #707c81;
+    font-size: 13px;
+    transition: 0.3s;
+}
+.web-account:hover span{
+    color: #ff4658;
+    transition: 0.3s;
+}
+.web-account:hover i{
+    color: #ff4658;
+    transition: 0.3s;
+}
+
+/* CSS main */
+.wp-body-lesson {
+    margin-top: 40px;
+}
+.wp-btn-back{
+    display: flex;
+    cursor: pointer;
+    padding-left: 20px;
+}
+.icon-btn-back{
+    width: 24px;
+    height: 24px;
+    background-color: #ff6171;
+    border-radius: 50px;
+    transition: 0.3s;
+    text-align: center;
+    line-height: 21px;
+    margin-right: 8px;
+}
+.wp-btn-back p{
+    font-weight: bold;
+    font-size: 15px;
+    color: #727a78;
+    transition: 0.3s;
+}
+.wp-btn-back:hover p{
+    color: #ff4658;
+    transition: 0.3s;
+}
+.wp-btn-back:hover .icon-btn-back{
+    background-color: #ff4658;
+    transition: 0.3s;
+}
+.icon-btn-back i {
+    color: #fff;
+    font-size: 12px;
+}
+.list-item{
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+    display: inline-block;
+    line-height: 60px;
+    margin-left: 20px;
+}
+.wp-list-item:hover .list-item{
+    color: #ff4658;
+    transition: 0.3s;
+}
+.wp-list-item {
+    height: 60px;
+    cursor: pointer;
+}
+.list-lesson{
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    width: 80%;
+    margin-top: 25px;
+}
+.list-item-long{
+    line-height: 20px;
+    margin-top: 10px;
+}
+.lesson-active{
+    background-color: #61B9F0;
+    
+}
+.lesson-active a{
+    color: #fff;
+}
+.lesson-active:hover a{
+    color: #fff!important;
+}
+.secret-lab{
+    background-color: #E9F9F8;
+    border-top: 1px solid #d8d8d8;
+}
+.wp-title-lesson{
+    display: flex;
+}
+.wp-title-lesson a {
+    font-size: 13px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+.wp-title-lesson i {
+    font-size: 10px;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+.wp-title-lesson a:hover{
+    color: #ff4658;
+    transition: 0.3s;
+}
+.active-txt{
+    font-weight: bold;
+}
+.lesson-detail--title{
+    margin-bottom: 25px;
+    font-weight: bold;
+    line-height: 32px;
+    font-size: 22px;
+}
+.lesson-detail{
+    margin-top: 20px;
+    text-align: center;
+}
+.learn-topic {
+    border: 4px solid #b0d2a8;
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    position: relative;
+    margin-right: 30px;
+}
+.learn-topic a {
+    display: block;
+}
+.learn-topic:hover .learn-txt a {
+    transition: 0.3s;
+    color: #ff4658; 
+}
+.learn-topic--img img {
+    width: 100%;
+    border-radius: 10px;
+}
+.learn-topic--icon i {
+    color: #B0D2A8;
+    font-size: 40px;
+}
+.learn-topic--icon {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+.lesson-detail--learn{
+    display: flex;
+}
+.learn-txt{
+    margin-top: 13px;
+}
+.learn-txt a{
+    line-height: 20px;
+    font-size: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+.learn-txt a:hover{
+    transition: 0.3s;
+    color: #ff4658;
+}

@@ -1,0 +1,476 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Educational web-site for children based on interactive learning</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" type="text/css" href="../vendor/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../vendor/jquery.mmenu.all.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+    <link rel="stylesheet" type="text/css" href="../CSS/Lesson.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/success.css">
+</head>
+<body>
+    <div class="wp-background-lesson" id="lesson-2" v-bind:class="{'hidden-background' : displayScreenSuccess == 0}">
+        <div class="wp-banner-lesson " v-bind:class="{'hidden-lesson' : displayScreenOne == 1}">
+            <div class="wp-nb-lesson">
+                <a href="../DragonLearn.html" class="btn-back">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Back</span>
+                </a>
+                <div class="nb-lesson">
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                </div>
+            </div>
+            <div class="wp-content-lesson-2">
+                <div class="content-lesson">
+                    <p class="content-lesson-txt">Choose the fraction among others</p>
+                    <div class="page-1">
+                        <div class="answer answer-1">
+                            <div class="wp-fr-answer">
+                                <p class="non-fr">cow</p>
+                            </div>
+                            <div class="btn-check-ans" id="wrong-answer-2" v-on:click="onClickWrongAns2">OK</div>
+                        </div>
+                        <div class="answer answer-2">
+                            <div class="wp-fr-answer">
+                                <div class="numerator">
+                                    <p>35</p>
+                                </div>
+                                <div class="line-fraction-page1"></div>
+                                <div class="denominator">
+                                    <p>43</p>
+                                </div>
+                            </div>
+                            <div class="btn-check-ans" id="right-ans" v-on:click="onClickRightAns">OK
+                            </div>
+                        </div>
+                        <div class="answer answer-3">
+                            <div class="wp-fr-answer">
+                                <p class="non-fr">14</p>
+                            </div>
+                            <div class="btn-check-ans" id="wrong-answer-1" v-on:click="onClickWrongAns1">OK
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson' : displayScreenTwo == 1}">
+            <div class="wp-nb-lesson">
+                <a href="../DragonLearn.html" class="btn-back">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Back</span>
+                </a>
+                <div class="nb-lesson">
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-8-ls2" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                </div>
+            </div>
+            <div class="wp-content-lesson-2">
+                <div class="content-lesson">
+                    <div clas="page-3">
+                        <div class="fraction-ls2">
+                            <div class="numerator-page-3 background-ques-fr">
+                                <p>35</p>
+                            </div>
+                            <div class="line-fraction-ls2"></div>
+                            <div class="denominator-page-3">
+                                <p>43</p>
+                            </div>
+                        </div>
+                        <p class="content-ls2 page-3">Is this fraction denominator?</p>
+                        <div class="Y-N-ans">
+                            <div class=" answer-Y" id="wrong-screen-2" v-on:click="wrongAnsScreen2">Yes
+                            </div>
+                            <div class=" answer-Y" id="right-screen-2" v-on:click="rightAnsScreen2">No
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>   
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson': displayScreenThree == 1}">
+            <div class="wp-nb-lesson">
+                <a href="../DragonLearn.html" class="btn-back">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Back</span>
+                </a>
+                <div class="nb-lesson">
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-7-ls2" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-8-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                </div>
+            </div>
+            <div class="wp-content-lesson-2">
+                <div class="content-lesson">
+                    <div clas="page-3">
+                        <div class="fraction-ls2">
+                            <div class="numerator-page-3 ">
+                                <p>7</p>
+                            </div>
+                            <div class="line-fraction-ls2"></div>
+                            <div class="denominator-page-3 background-ques-fr">
+                                <p>11</p>
+                            </div>
+                        </div>
+                        <p class="content-ls2 page-3">Is this fraction numerator?</p>
+                        <div class="Y-N-ans">
+                            <div class=" answer-Y" id="wrong-screen-3" v-on:click="wrongAnsScreen3">Yes
+                            </div>
+                            <div class=" answer-Y" id="right-screen-3" v-on:click="rightAnsScreen3">No
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>  
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson': displayScreenFour == 1}">
+            <div class="wp-nb-lesson">
+                <a href="../DragonLearn.html" class="btn-back">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Back</span>
+                </a>
+                <div class="nb-lesson">
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-6-ls2" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-7-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-8-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                </div>
+            </div>
+            <div class="wp-content-lesson-2">
+                <div class="content-lesson">
+                    <div clas="page-3">
+                        <div class="fraction-ls2">
+                            <div class="numerator-page-3 " style="width: auto">
+                                <p>133</p>
+                            </div>
+                            <div class="line-fraction-ls2" style="width: 109px;"></div>
+                            <div class="denominator-page-3 background-ques-fr">
+                                <p>41</p>
+                            </div>
+                        </div>
+                        <p class="content-ls2 page-3">Is this fraction denominator?</p>
+                        <div class="Y-N-ans">
+                            <div class=" answer-Y" id="right-screen-4" v-on:click="rightAnsScreen4">Yes
+                            </div>
+                            <div class=" answer-Y" id="wrong-screen-4" v-on:click="wrongAnsScreen4">No
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>  
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson': displayScreenFive == 1}">
+            <div class="wp-nb-lesson">
+                <a href="../DragonLearn.html" class="btn-back">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Back</span>
+                </a>
+                <div class="nb-lesson">
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-5-ls2" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-6-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-7-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-8-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                </div>
+            </div>
+            <div class="wp-content-lesson-2">
+                <div class="content-lesson">
+                    <div clas="page-3">
+                        <div class="fraction-ls2">
+                            <div class="numerator-page-3 background-ques-fr">
+                                <p>7</p>
+                            </div>
+                            <div class="line-fraction-ls2"></div>
+                            <div class="denominator-page-3 ">
+                                <p>11</p>
+                            </div>
+                        </div>
+                        <p class="content-ls2 page-3">Is this fraction denominator?</p>
+                        <div class="Y-N-ans">
+                            <div class=" answer-Y" id="wrong-screen-5" v-on:click="wrongAnsScreen5">Yes
+                            </div>
+                            <div class=" answer-Y" id="right-screen-5" v-on:click="rightAnsScreen5">No
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>    
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson': displayScreenSix == 1}">
+            <div class="wp-nb-lesson">
+                <a href="../DragonLearn.html" class="btn-back">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Back</span>
+                </a>
+                <div class="nb-lesson">
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-4-ls2" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-5-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-6-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-7-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-8-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                </div>
+            </div>
+            <div class="wp-content-lesson-2">
+                <div class="content-lesson">
+                    <div class="ques-fr">
+                        <div class="ques-fr--num">35</div>
+                        <div class="ques-fr--bar"></div>
+                        <div class="ques-fr--num">43</div>
+                    </div>
+                    <div class="ques-title-block">
+                        <p class="ques-title-block--txt">What is the numerator of this fraction?</p>
+                        <input id="type_cypress" type="text" class="ques-title-block--field" v-on:input="handleInputPlayer" v-model:value="inputAnsSix">
+                    </div>
+                    <div class="wp-btn-link-next" id="btn-done-six" v-on:click="handleClickDone">Done
+                    </div>
+                </div>
+            </div> 
+        </div> 
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson': displayScreenSeven == 1}">
+            <div class="wp-nb-lesson">
+                <a href="../DragonLearn.html" class="btn-back">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Back</span>
+                </a>
+                <div class="nb-lesson">
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-3-ls2" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-4-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-5-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-6-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-7-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-8-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                </div>
+            </div>
+            <div class="wp-content-lesson-2">
+                <div class="content-lesson">
+                    <div class="ques-fr">
+                        <div class="ques-fr--num">7</div>
+                        <div class="ques-fr--bar"></div>
+                        <div class="ques-fr--num">11</div>
+                    </div>
+                    <div class="ques-title-block">
+                        <p class="ques-title-block--txt">What is the denominator of this fraction?</p>
+                        <input id="type_cypress_screen_seven" type="text" class="ques-title-block--field" v-on:input="handleInputPlayerSeven" v-model:value="inputAnsSeven">
+                    </div>
+                    <div class="wp-btn-link-next" id="btn-done-seven" v-on:click="handleClickDoneSeven">Done
+                    </div>
+                </div>
+            </div> 
+        </div>  
+        <div class="wp-banner-lesson" v-bind:class="{'hidden-lesson': displayScreenEight == 1}">
+            <div class="wp-nb-lesson">
+                <a href="../DragonLearn.html" class="btn-back">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Back</span>
+                </a>
+                <div class="nb-lesson">
+                    <div class="wp-img-ball" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-2-ls2" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-3-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-4-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-5-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-6-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-7-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                    <div class="wp-img-ball ball-8-ls2 delay" style="margin-top: 2px;">
+                        <img src="../img/ball.png">
+                    </div>
+                </div>
+            </div>
+            <div class="wp-content-lesson-2">
+                <div class="content-lesson">
+                    <div class="ques-fr">
+                        <div class="ques-fr--num">133</div>
+                        <div class="ques-fr--bar" style="width: 108px;"></div>
+                        <div class="ques-fr--num">41</div>
+                    </div>
+                    <div class="ques-title-block">
+                        <p class="ques-title-block--txt">What is the numerator of this fraction?</p>
+                        <input id="type_cypress_screen_eight" type="text" class="ques-title-block--field" v-on:input="handleInputPlayerEight" v-model:value="inputAnsEight">
+                    </div>
+                    <div class="wp-btn-link-next" id="btn-done-eight" v-on:click="handleClickDoneEight">Done
+                    </div>
+                </div>
+            </div> 
+        </div>   
+        <div class="wp-banner-success" v-bind:class="{'hidden-lesson' : displayScreenSuccess == 1}">
+            <div class="success-txt">
+                <p>Well done! You completed the card!</p>
+            </div>
+            <div class="success-img">
+                <img src="../img/success.png">
+            </div>
+            <div class="success-btn">
+                <a href="../DragonLearn.html">Go to lesson</a>
+            </div>
+        </div>                                             
+    </div>
+
+    <script src="../vendor/jquery-3.4.1.min.js"></script>
+    <script src="../JS/Lesson2.js"></script>
+    <script src="../JS/main.js"></script>
+
+</body>
+</html>
